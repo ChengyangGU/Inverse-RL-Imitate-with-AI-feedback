@@ -1,0 +1,7 @@
+gym == 0.25.2
+mujoco == 2.3.7
+free-mujoco-py == 2.1.6
+gymnasium == 0.29.1
+shimmy == 1.3.0
+timm == 0.9.16
+stable-baselines3

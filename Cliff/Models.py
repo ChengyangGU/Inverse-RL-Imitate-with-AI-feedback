@@ -59,3 +59,11 @@ class BCPolicyDiscrete(nn.Module):
         x = self.fc3(x)
         x = softmax(x)
         return x
+    
+
+class LLMPolicyAdapter(nn.Module):
+    def __init__(self, state_dim, action_dim, hidden_dim):
+        super(LLMPolicyAdapter, self).__init__()
+        self.fc1 = nn.Linear(state_dim, hidden_dim)
+        self.fc2 = nn.Linear(hidden_dim, hidden_dim)
+        self.fc3 = nn.Linear(hidden_dim, action_dim)
